@@ -338,7 +338,7 @@ shell/.pod
 
 # Troff with me macros.
 # Exception - "read.me" is not a nroff file.
-regex/i//read\.me$
+shell/read.me
 	Open=
 	View=
 
@@ -625,7 +625,7 @@ regex//[Mm]akefile$
 	Open=make -f %f %{Enter parameters}
 
 # Imakefile
-regex//Imakefile$
+shell/Imakefile
 	Open=@EXTHELPERSDIR@/misc.sh open imakefile
 
 # Makefile.PL (MakeMaker)
