@@ -621,7 +621,7 @@ shell/.class
 	View=%view{ascii} @EXTHELPERSDIR@/misc.sh view javaclass
 
 # Makefile
-regex/[Mm]akefile$
+shell/i/Makefile
 	Open=make -f %f %{Enter parameters}
 
 # Imakefile
