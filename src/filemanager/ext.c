@@ -872,10 +872,8 @@ regex_command_for (void *target, const vfs_path_t * filename_vpath, const char *
     include_target = NULL;
     include_target_len = 0;
 
-    filename = vfs_path_as_str (filename_vpath);
-    /* filename is full path and contains slash.
-     * FIXME: don't check that. */
-    filename = strrchr (filename, PATH_SEP) + 1;
+    filename = vfs_path_get_last_path_str (filename_vpath);
+    filename = x_basename (filename);
     file_len = strlen (filename);
 
     for (p = data; *p != '\0'; p++)
